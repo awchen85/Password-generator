@@ -12,9 +12,11 @@ Challenges with this were getting the javascript to read HTML elements and deliv
 *Click Generate Password
 *Follow the prompts!
 
+## Link to site:
+https://awchen85.github.io/password-generator/
 
-## Created by Alex Chen
-## Using HTML, CSS and Javascript
+### Created by Alex Chen
+### Using HTML, CSS and Javascript
 
 ## Screenshot of the site:
 
