@@ -16,7 +16,11 @@ function writePassword() {
 //prompts that come up when you click generate password
 function generatePassword() {
 var passwordLength = prompt("Please enter the number of characters you want your password to be. It must be more than 8, but not more than 128.");
-
+if (passwordLength < 8 || passwordLength > 128) {
+    window.alert("Your passwords must be between 8 and 128 characters. Try again.");
+    generatePassword() }
+    else {
+    
 var numbers = confirm("Do you want numbers in your password?");
 var lowerCase = confirm("Do you want lower case in your password?");
 var upperCase = confirm("Do you want uppercase in your password?");
@@ -48,10 +52,11 @@ return String.fromCharCode(Math.floor(Math.random() * 10 + 52));
   }
 };
 
-if (numbers > 8) {
+if (numbers >= 8) {
   minimumNumbers = functionArray.getNumbers();
   minimumCount++;
 }
+
 if (lowerCase === true) {
   minimumLowerCase = functionArray.getLowerCase();
   minimumCount++;
@@ -83,5 +88,6 @@ randomPasswordGenerated += minimumUpperCase;
 randomPasswordGenerated += minimumSpecialChar;
 
 return randomPasswordGenerated;
+    }
 
-}
+};
